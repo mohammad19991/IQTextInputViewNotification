@@ -1,0 +1,16 @@
+PODS:
+  - IQTextInputViewNotification (1.0.0)
+
+DEPENDENCIES:
+  - IQTextInputViewNotification (from `../`)
+
+EXTERNAL SOURCES:
+  IQTextInputViewNotification:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  IQTextInputViewNotification: 0ac005f3d13cbb2b04da9e3b68685c7c96262437
+
+PODFILE CHECKSUM: bc202e2a3b61bf7df328b0fd3cefe28ef58e0f6a
+
+COCOAPODS: 1.15.2

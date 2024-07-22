@@ -7,18 +7,52 @@
 //
 
 import UIKit
+import IQTextInputViewNotification
 
 class ViewController: UIViewController {
 
+    private let keyboard: IQTextInputViewNotification = .init()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    @IBAction private func subscribeAction(_ sender: UIBarButtonItem) {
 
+        let identifier: String = "NotificationIdentifier"
+
+        if keyboard.isSubscribed(identifier: identifier) {
+            sender.title = "Subscribe"
+            keyboard.unsubscribe(identifier: identifier)
+            keyboard.textFieldView?.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+        } else {
+            sender.title = "Unsubscribe"
+            keyboard.subscribe(identifier: identifier) { info in
+                print(info.event.name, ":", info.textInputView)
+
+                switch info.event {
+                case .beginEditing:
+                    info.textInputView.backgroundColor = UIColor(named: "FBBC05")
+                case .endEditing:
+                    info.textInputView.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+                }
+            }
+        }
+    }
 }
 
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+}
+
+extension ViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+}
