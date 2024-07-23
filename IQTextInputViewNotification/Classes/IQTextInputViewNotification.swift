@@ -30,15 +30,15 @@ public class IQTextInputViewNotification {
 
     private var storage: Set<AnyCancellable> = []
 
-    private var textFieldViewObservers: [AnyHashable: TextInputViewCompletion] = [:]
+    private var textInputViewObservers: [AnyHashable: TextInputViewCompletion] = [:]
 
 #if swift(>=5.7)
-    private(set) var oldTextFieldViewInfo: IQTextInputViewInfo?
+    private(set) var oldTextInputViewInfo: IQTextInputViewInfo?
 #endif
 
     public private(set) var textInputViewInfo: IQTextInputViewInfo?
 
-    public var textFieldView: UIView? {
+    public var textInputView: UIView? {
         return textInputViewInfo?.textInputView
     }
 
@@ -85,18 +85,18 @@ public class IQTextInputViewNotification {
 #if swift(>=5.7)
 
         if #available(iOS 16.0, *),
-           let oldTextFieldViewInfo = oldTextFieldViewInfo,
-           let textView: UITextView = oldTextFieldViewInfo.textInputView as? UITextView,
+           let oldTextInputViewInfo = oldTextInputViewInfo,
+           let textView: UITextView = oldTextInputViewInfo.textInputView as? UITextView,
            textView.findInteraction?.isFindNavigatorVisible == true {
             // // This means the this didBeginEditing call comes due to find interaction
-            textInputViewInfo = oldTextFieldViewInfo
-            sendEvent(info: oldTextFieldViewInfo)
+            textInputViewInfo = oldTextInputViewInfo
+            sendEvent(info: oldTextInputViewInfo)
         } else if textInputViewInfo != info {
             textInputViewInfo = info
-            oldTextFieldViewInfo = nil
+            oldTextInputViewInfo = nil
             sendEvent(info: info)
         } else {
-            oldTextFieldViewInfo = nil
+            oldTextInputViewInfo = nil
         }
 #else
         if textInputViewInfo != info {
@@ -113,9 +113,9 @@ public class IQTextInputViewNotification {
             if #available(iOS 16.0, *),
                let textView: UITextView = info.textInputView as? UITextView,
                 textView.isFindInteractionEnabled {
-                oldTextFieldViewInfo = textInputViewInfo
+                oldTextInputViewInfo = textInputViewInfo
             } else {
-                oldTextFieldViewInfo = nil
+                oldTextInputViewInfo = nil
             }
 #endif
             textInputViewInfo = info
@@ -131,7 +131,7 @@ public extension IQTextInputViewNotification {
     typealias TextInputViewCompletion = (_ info: IQTextInputViewInfo) -> Void
 
     func subscribe(identifier: AnyHashable, changeHandler: @escaping TextInputViewCompletion) {
-        textFieldViewObservers[identifier] = changeHandler
+        textInputViewObservers[identifier] = changeHandler
 
         if let textInputViewInfo = textInputViewInfo {
             changeHandler(textInputViewInfo)
@@ -139,16 +139,16 @@ public extension IQTextInputViewNotification {
     }
 
     func unsubscribe(identifier: AnyHashable) {
-        textFieldViewObservers[identifier] = nil
+        textInputViewObservers[identifier] = nil
     }
 
     func isSubscribed(identifier: AnyHashable) -> Bool {
-        return textFieldViewObservers[identifier] != nil
+        return textInputViewObservers[identifier] != nil
     }
 
     private func sendEvent(info: IQTextInputViewInfo) {
 
-        for block in textFieldViewObservers.values {
+        for block in textInputViewObservers.values {
             block(info)
         }
     }

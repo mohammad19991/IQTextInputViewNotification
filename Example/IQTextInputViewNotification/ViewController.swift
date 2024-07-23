@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         if keyboard.isSubscribed(identifier: identifier) {
             sender.title = "Subscribe"
             keyboard.unsubscribe(identifier: identifier)
-            keyboard.textFieldView?.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+            keyboard.textInputView?.backgroundColor = UIColor.white.withAlphaComponent(0.2)
         } else {
             sender.title = "Unsubscribe"
             keyboard.subscribe(identifier: identifier) { info in
