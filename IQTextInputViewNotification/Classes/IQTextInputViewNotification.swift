@@ -23,28 +23,28 @@
 
 import UIKit
 import Combine
+import IQKeyboardCore
 
 @available(iOSApplicationExtension, unavailable)
 @MainActor
-public class IQTextInputViewNotification {
+@objc public class IQTextInputViewNotification: NSObject {
 
     private var storage: Set<AnyCancellable> = []
 
     private var textInputViewObservers: [AnyHashable: TextInputViewCompletion] = [:]
 
-#if swift(>=5.7)
-    private(set) var oldTextInputViewInfo: IQTextInputViewInfo?
-#endif
+    private var findInteractionTextInputViewInfo: IQTextInputViewInfo?
 
     public private(set) var textInputViewInfo: IQTextInputViewInfo?
 
-    public var textInputView: UIView? {
+    public var textInputView: (any IQTextInputView)? {
         return textInputViewInfo?.textInputView
     }
 
-    public init() {
+    @objc public override init() {
+        super.init()
 
-        //  Registering for UITextField / UITextView notification.
+        //  Registering for TextInputView notification.
         do {
             let beginEditingNotificationNames: [Notification.Name] = [
                 UITextField.textDidBeginEditingNotification,
@@ -82,42 +82,30 @@ public class IQTextInputViewNotification {
 
     private func didBeginEditing(info: IQTextInputViewInfo) {
 
-#if swift(>=5.7)
-
         if #available(iOS 16.0, *),
-           let oldTextInputViewInfo = oldTextInputViewInfo,
-           let textView: UITextView = oldTextInputViewInfo.textInputView as? UITextView,
-           textView.findInteraction?.isFindNavigatorVisible == true {
+           let findInteractionTextInputViewInfo = findInteractionTextInputViewInfo,
+           findInteractionTextInputViewInfo.textInputView.findInteraction?.isFindNavigatorVisible == true {
             // // This means the this didBeginEditing call comes due to find interaction
-            textInputViewInfo = oldTextInputViewInfo
-            sendEvent(info: oldTextInputViewInfo)
+            textInputViewInfo = findInteractionTextInputViewInfo
+            sendEvent(info: findInteractionTextInputViewInfo)
         } else if textInputViewInfo != info {
             textInputViewInfo = info
-            oldTextInputViewInfo = nil
+            findInteractionTextInputViewInfo = nil
             sendEvent(info: info)
         } else {
-            oldTextInputViewInfo = nil
+            findInteractionTextInputViewInfo = nil
         }
-#else
-        if textInputViewInfo != info {
-            textInputViewInfo = info
-            sendEvent(info: info)
-        }
-#endif
     }
 
     private func didEndEditing(info: IQTextInputViewInfo) {
 
         if textInputViewInfo != info {
-#if swift(>=5.7)
             if #available(iOS 16.0, *),
-               let textView: UITextView = info.textInputView as? UITextView,
-                textView.isFindInteractionEnabled {
-                oldTextInputViewInfo = textInputViewInfo
+               info.textInputView.isFindInteractionEnabled {
+                findInteractionTextInputViewInfo = textInputViewInfo
             } else {
-                oldTextInputViewInfo = nil
+                findInteractionTextInputViewInfo = nil
             }
-#endif
             textInputViewInfo = info
             sendEvent(info: info)
             textInputViewInfo = nil
@@ -126,6 +114,7 @@ public class IQTextInputViewNotification {
 }
 
 @available(iOSApplicationExtension, unavailable)
+@MainActor
 public extension IQTextInputViewNotification {
 
     typealias TextInputViewCompletion = (_ info: IQTextInputViewInfo) -> Void

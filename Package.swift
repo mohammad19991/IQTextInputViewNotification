@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.7
 
 import PackageDescription
 
@@ -13,16 +13,20 @@ let package = Package(
             targets: ["IQTextInputViewNotification"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/hackiftekhar/IQKeyboardCore.git", from: "1.0.3"),
+    ],
     targets: [
         .target(name: "IQTextInputViewNotification",
-            path: "IQTextInputViewNotification",
-            resources: [
-                .copy("Assets/PrivacyInfo.xcprivacy")
-            ],
-            linkerSettings: [
-                .linkedFramework("Combine"),
-                .linkedFramework("UIKit")
-            ]
-        )
+                dependencies: ["IQKeyboardCore"],
+                path: "IQTextInputViewNotification",
+                resources: [
+                    .copy("Assets/PrivacyInfo.xcprivacy")
+                ],
+                linkerSettings: [
+                    .linkedFramework("Combine"),
+                    .linkedFramework("UIKit")
+                ]
+               )
     ]
 )
