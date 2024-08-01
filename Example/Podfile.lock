@@ -1,7 +1,7 @@
 PODS:
-  - IQKeyboardCore (1.0.3)
-  - IQTextInputViewNotification (1.0.1):
-    - IQKeyboardCore (= 1.0.3)
+  - IQKeyboardCore (1.0.4)
+  - IQTextInputViewNotification (1.0.3):
+    - IQKeyboardCore (= 1.0.4)
 
 DEPENDENCIES:
   - IQTextInputViewNotification (from `../`)
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  IQKeyboardCore: 0adcddeac1349a2db3d3e5dd6635c9997c119c75
-  IQTextInputViewNotification: c6bafaa62f56bdfa267867095cf5854663830d44
+  IQKeyboardCore: 310a5386778eada46ac2a1c5645b73f5c7770d9e
+  IQTextInputViewNotification: 749a14372f6b4b4d6a4d59bc59cf7988894aaab7
 
 PODFILE CHECKSUM: bc202e2a3b61bf7df328b0fd3cefe28ef58e0f6a
 

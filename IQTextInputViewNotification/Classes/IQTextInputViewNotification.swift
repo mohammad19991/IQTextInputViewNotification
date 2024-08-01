@@ -84,7 +84,7 @@ import IQKeyboardCore
 
         if #available(iOS 16.0, *),
            let findInteractionTextInputViewInfo = findInteractionTextInputViewInfo,
-           findInteractionTextInputViewInfo.textInputView.findInteraction?.isFindNavigatorVisible == true {
+           findInteractionTextInputViewInfo.textInputView.iqFindInteraction?.isFindNavigatorVisible == true {
             // // This means the this didBeginEditing call comes due to find interaction
             textInputViewInfo = findInteractionTextInputViewInfo
             sendEvent(info: findInteractionTextInputViewInfo)
@@ -101,7 +101,7 @@ import IQKeyboardCore
 
         if textInputViewInfo != info {
             if #available(iOS 16.0, *),
-               info.textInputView.isFindInteractionEnabled {
+               info.textInputView.iqIsFindInteractionEnabled {
                 findInteractionTextInputViewInfo = textInputViewInfo
             } else {
                 findInteractionTextInputViewInfo = nil
