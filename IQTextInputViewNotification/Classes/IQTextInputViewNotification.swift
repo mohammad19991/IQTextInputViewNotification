@@ -37,7 +37,7 @@ import IQKeyboardCore
 
     public private(set) var textInputViewInfo: IQTextInputViewInfo?
 
-    public var textInputView: (any IQTextInputView)? {
+    public var textInputView: (some IQTextInputView)? {
         return textInputViewInfo?.textInputView
     }
 

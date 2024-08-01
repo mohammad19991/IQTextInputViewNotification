@@ -1,9 +1,9 @@
 {
     "name": "IQTextInputViewNotification",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "source": {
         "git": "https://github.com/hackiftekhar/IQTextInputViewNotification.git",
-        "tag": "1.0.2"
+        "tag": "1.0.3"
     },
     "summary": "Easy UITextField / UITextView Event Subscription",
     "description": "Used for observing textField/textView begin editing and end editing events.",
@@ -25,7 +25,7 @@
         "5.9"
     ],
     "dependencies": {
-        "IQKeyboardCore": ["1.0.3"]
+        "IQKeyboardCore": ["1.0.4"]
     },
     "source_files": [
         "IQTextInputViewNotification/Classes/**/*.{swift}"
