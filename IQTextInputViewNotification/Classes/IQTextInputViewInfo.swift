@@ -25,7 +25,7 @@ import UIKit
 import IQKeyboardCore
 
 @available(iOSApplicationExtension, unavailable)
-
+@MainActor
 public struct IQTextInputViewInfo: Equatable {
 
     nonisolated public static func == (lhs: Self, rhs: Self) -> Bool {
@@ -33,6 +33,7 @@ public struct IQTextInputViewInfo: Equatable {
         lhs.event == rhs.event
     }
 
+    @MainActor
     @objc public enum Event: Int {
         case beginEditing
         case endEditing
@@ -59,4 +60,19 @@ public struct IQTextInputViewInfo: Equatable {
         self.event = event
         textInputView = view
     }
+}
+
+@available(iOSApplicationExtension, unavailable)
+public extension IQTextInputViewInfo {
+
+    @available(*, unavailable, renamed: "event")
+    var name: Event { event }
+
+    @available(*, unavailable, renamed: "textInputView")
+    var textFieldView: any IQTextInputView { textInputView }
+}
+
+@available(*, unavailable, renamed: "IQTextInputViewInfo")
+@MainActor
+public struct IQTextFieldViewInfo: Equatable {
 }

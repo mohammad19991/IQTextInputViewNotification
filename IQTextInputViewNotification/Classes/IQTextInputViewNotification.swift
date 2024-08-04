@@ -27,7 +27,7 @@ import IQKeyboardCore
 
 @available(iOSApplicationExtension, unavailable)
 @MainActor
-@objc public class IQTextInputViewNotification: NSObject {
+@objc public final class IQTextInputViewNotification: NSObject {
 
     private var storage: Set<AnyCancellable> = []
 
@@ -142,3 +142,24 @@ public extension IQTextInputViewNotification {
         }
     }
 }
+
+@available(iOSApplicationExtension, unavailable)
+@MainActor
+public extension IQTextInputViewNotification {
+
+    @available(*, unavailable, renamed: "textInputViewInfo")
+    var textFieldViewInfo: IQTextInputViewInfo? { textInputViewInfo }
+
+    @available(*, unavailable, renamed: "textInputView")
+    var textFieldView: (some IQTextInputView)? { textInputView }
+
+    @available(*, unavailable, renamed: "subscribe(identifier:changeHandler:)")
+    func registerTextFieldViewChange(identifier: AnyHashable, changeHandler: @escaping TextInputViewCompletion) {}
+
+    @available(*, unavailable, renamed: "unsubscribe(identifier:)")
+    func unregisterSizeChange(identifier: AnyHashable) {}
+}
+
+@available(*, unavailable, renamed: "IQTextInputViewNotification")
+@MainActor
+@objc public final class IQTextFieldViewListener: NSObject {}
