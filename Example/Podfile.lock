@@ -1,23 +1,28 @@
 PODS:
-  - IQKeyboardCore (1.0.4)
-  - IQTextInputViewNotification (1.0.3):
-    - IQKeyboardCore (= 1.0.4)
+  - IQKeyboardCore (1.0.5)
+  - IQTextInputViewNotification (1.0.4):
+    - IQKeyboardCore (= 1.0.5)
 
 DEPENDENCIES:
+  - IQKeyboardCore (from `https://github.com/hackiftekhar/IQKeyboardCore.git`, tag `1.0.5`)
   - IQTextInputViewNotification (from `../`)
 
-SPEC REPOS:
-  trunk:
-    - IQKeyboardCore
-
 EXTERNAL SOURCES:
+  IQKeyboardCore:
+    :git: https://github.com/hackiftekhar/IQKeyboardCore.git
+    :tag: 1.0.5
   IQTextInputViewNotification:
     :path: "../"
 
-SPEC CHECKSUMS:
-  IQKeyboardCore: 310a5386778eada46ac2a1c5645b73f5c7770d9e
-  IQTextInputViewNotification: 749a14372f6b4b4d6a4d59bc59cf7988894aaab7
+CHECKOUT OPTIONS:
+  IQKeyboardCore:
+    :git: https://github.com/hackiftekhar/IQKeyboardCore.git
+    :tag: 1.0.5
 
-PODFILE CHECKSUM: bc202e2a3b61bf7df328b0fd3cefe28ef58e0f6a
+SPEC CHECKSUMS:
+  IQKeyboardCore: 28c8bf3bcd8ba5aa1570b318cbc4da94b861711e
+  IQTextInputViewNotification: ea75cd43c792d6a88016e3c21a7931ebb17e5c53
+
+PODFILE CHECKSUM: 04a1d22168a0378ef92c233c5df4782621228a06
 
 COCOAPODS: 1.15.2
