@@ -27,7 +27,7 @@ import IQKeyboardCore
 
 @available(iOSApplicationExtension, unavailable)
 @MainActor
-@objc public final class IQTextInputViewNotification: NSObject {
+@objcMembers public final class IQTextInputViewNotification: NSObject {
 
     private var storage: Set<AnyCancellable> = []
 
@@ -37,11 +37,15 @@ import IQKeyboardCore
 
     public private(set) var textInputViewInfo: IQTextInputViewInfo?
 
-    public var textInputView: (some IQTextInputView)? {
+    public var event: IQTextInputViewInfo.Event? { 
+        textInputViewInfo?.event
+    }
+
+    public var textInputView: (any IQTextInputView)? {
         return textInputViewInfo?.textInputView
     }
 
-    @objc public override init() {
+    public override init() {
         super.init()
 
         //  Registering for TextInputView notification.
@@ -115,15 +119,15 @@ import IQKeyboardCore
 
 @available(iOSApplicationExtension, unavailable)
 @MainActor
-public extension IQTextInputViewNotification {
+@objc public extension IQTextInputViewNotification {
 
-    typealias TextInputViewCompletion = (_ info: IQTextInputViewInfo) -> Void
+    typealias TextInputViewCompletion = (_ event: IQTextInputViewInfo.Event, _ textInputView: any IQTextInputView) -> Void
 
     func subscribe(identifier: AnyHashable, changeHandler: @escaping TextInputViewCompletion) {
         textInputViewObservers[identifier] = changeHandler
 
         if let textInputViewInfo = textInputViewInfo {
-            changeHandler(textInputViewInfo)
+            changeHandler(textInputViewInfo.event, textInputViewInfo.textInputView)
         }
     }
 
@@ -135,10 +139,11 @@ public extension IQTextInputViewNotification {
         return textInputViewObservers[identifier] != nil
     }
 
+    @nonobjc
     private func sendEvent(info: IQTextInputViewInfo) {
 
         for block in textInputViewObservers.values {
-            block(info)
+            block(info.event, info.textInputView)
         }
     }
 }
@@ -162,4 +167,15 @@ public extension IQTextInputViewNotification {
 
 @available(*, unavailable, renamed: "IQTextInputViewNotification")
 @MainActor
-@objc public final class IQTextFieldViewListener: NSObject {}
+@objcMembers public final class IQTextFieldViewListener: NSObject {}
+
+@available(iOSApplicationExtension, unavailable)
+@MainActor
+@objc public extension IQTextInputViewNotification {
+
+    var textInputViewInfoObjc: IQTextInputViewInfoObjC? {
+        guard let textInputViewInfo = textInputViewInfo else { return nil }
+        return IQTextInputViewInfoObjC(wrappedValue: textInputViewInfo)
+    }
+}
+

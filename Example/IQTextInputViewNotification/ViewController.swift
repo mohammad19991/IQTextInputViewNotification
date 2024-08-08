@@ -11,7 +11,7 @@ import IQTextInputViewNotification
 
 class ViewController: UIViewController {
 
-    private let keyboard: IQTextInputViewNotification = .init()
+    private let textInputViewObserver: IQTextInputViewNotification = .init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,20 +21,20 @@ class ViewController: UIViewController {
 
         let identifier: String = "NotificationIdentifier"
 
-        if keyboard.isSubscribed(identifier: identifier) {
+        if textInputViewObserver.isSubscribed(identifier: identifier) {
             sender.title = "Subscribe"
-            keyboard.unsubscribe(identifier: identifier)
-            keyboard.textInputView?.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+            textInputViewObserver.unsubscribe(identifier: identifier)
+            textInputViewObserver.textInputView?.backgroundColor = UIColor.white.withAlphaComponent(0.2)
         } else {
             sender.title = "Unsubscribe"
-            keyboard.subscribe(identifier: identifier) { info in
-                print(info.event.name, ":", info.textInputView)
+            textInputViewObserver.subscribe(identifier: identifier) { event, textInputView in
+                print(event.name, ":", textInputView)
 
-                switch info.event {
+                switch event {
                 case .beginEditing:
-                    info.textInputView.backgroundColor = UIColor(named: "FBBC05")
+                    textInputView.backgroundColor = UIColor(named: "FBBC05")
                 case .endEditing:
-                    info.textInputView.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+                    textInputView.backgroundColor = UIColor.white.withAlphaComponent(0.2)
                 }
             }
         }

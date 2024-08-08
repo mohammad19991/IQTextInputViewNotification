@@ -74,5 +74,17 @@ public extension IQTextInputViewInfo {
 
 @available(*, unavailable, renamed: "IQTextInputViewInfo")
 @MainActor
-public struct IQTextFieldViewInfo: Equatable {
+public struct IQTextFieldViewInfo: Equatable {}
+
+@available(iOSApplicationExtension, unavailable)
+@objcMembers public class IQTextInputViewInfoObjC: NSObject {
+    private let wrappedValue: IQTextInputViewInfo
+
+    public var event: IQTextInputViewInfo.Event { wrappedValue.event }
+
+    public var textInputView: any IQTextInputView { wrappedValue.textInputView }
+
+    init(wrappedValue: IQTextInputViewInfo){
+        self.wrappedValue = wrappedValue
+    }
 }

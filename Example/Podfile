@@ -4,10 +4,9 @@ platform :ios, '13.0'
 
 target 'IQTextInputViewNotification_Example' do
   pod 'IQTextInputViewNotification', :path => '../'
+end
 
-  target 'IQTextInputViewNotification_Tests' do
-    inherit! :search_paths
 
-    
-  end
+target 'IQTextInputViewNotification_ObjcExample' do
+  pod 'IQTextInputViewNotification', :path => '../'
 end

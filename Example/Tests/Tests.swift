@@ -1,5 +1,4 @@
 import XCTest
-import IQTextInputViewNotification
 
 class Tests: XCTestCase {
     
