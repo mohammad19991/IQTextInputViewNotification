@@ -22,6 +22,37 @@ it, simply add the following line to your Podfile:
 pod 'IQTextInputViewNotification'
 ```
 
+## Usage
+
+To observe textInputView becomeFirstResponder and resignFirstResponder changes, subscribe to the textInputView events:-
+
+```swift
+import IQTextInputViewNotification
+
+class ViewController: UIViewController {
+
+    private let textInputViewObserver: IQTextInputViewNotification = .init()
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Subscribe
+        textInputViewObserver.subscribe(identifier: "YOUR_UNIQUE_IDENTIFIER") {info in
+            print(info.event.name) // BeginEditing or EndEditing event
+            print(info.textInputView) // TextInputView which begin editing or end editing
+            // Write your own logic here based on event
+        }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Unsubscribe
+        textInputViewObserver.unsubscribe(identifier: "YOUR_UNIQUE_IDENTIFIER")
+    }
+}
+```
+
 ## Author
 
 Iftekhar Qurashi hack.iftekhar@gmail.com
