@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,17 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7EE309F4D4785D1F7A44A740 /* Pods_IQTextInputViewNotification_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAF4A4E8600083340FA03B5 /* Pods_IQTextInputViewNotification_Example.framework */; };
 		92024591735A540780DEA3E5 /* Pods_IQTextInputViewNotification_ObjcExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC83D007F7BD069AA0F0A736 /* Pods_IQTextInputViewNotification_ObjcExample.framework */; };
+		C01ED1A42C6A4902004BA157 /* IQTextInputViewNotification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01ED19E2C6A4901004BA157 /* IQTextInputViewNotification.framework */; };
+		C01ED1A52C6A4902004BA157 /* IQTextInputViewNotification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C01ED19E2C6A4901004BA157 /* IQTextInputViewNotification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C01ED1B22C6A4979004BA157 /* IQTextInputViewNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1AC2C6A4979004BA157 /* IQTextInputViewNotification.swift */; };
+		C01ED1B32C6A4979004BA157 /* IQTextInputViewNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1AC2C6A4979004BA157 /* IQTextInputViewNotification.swift */; };
+		C01ED1B42C6A4979004BA157 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = C01ED1AD2C6A4979004BA157 /* .gitkeep */; };
+		C01ED1B62C6A4979004BA157 /* IQTextInputViewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1AE2C6A4979004BA157 /* IQTextInputViewInfo.swift */; };
+		C01ED1B72C6A4979004BA157 /* IQTextInputViewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1AE2C6A4979004BA157 /* IQTextInputViewInfo.swift */; };
+		C01ED1B82C6A4979004BA157 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = C01ED1B02C6A4979004BA157 /* .gitkeep */; };
+		C01ED1BA2C6A4979004BA157 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C01ED1B12C6A4979004BA157 /* PrivacyInfo.xcprivacy */; };
+		C01ED1BB2C6A4979004BA157 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C01ED1B12C6A4979004BA157 /* PrivacyInfo.xcprivacy */; };
+		C01ED1BD2C6A4995004BA157 /* IQKeyboardCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01ED1BC2C6A4995004BA157 /* IQKeyboardCore.xcframework */; };
 		C07433422C63AFF50076A8B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C07433412C63AFF50076A8B7 /* AppDelegate.m */; };
 		C07433452C63AFF50076A8B7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C07433442C63AFF50076A8B7 /* SceneDelegate.m */; };
 		C07433482C63AFF50076A8B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07433472C63AFF50076A8B7 /* ViewController.m */; };
@@ -32,7 +43,28 @@
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
 			remoteInfo = IQTextInputViewNotification;
 		};
+		C01ED1A22C6A4902004BA157 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C01ED19D2C6A4901004BA157;
+			remoteInfo = "IQTextInputViewNotification-iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C01ED1A62C6A4902004BA157 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C01ED1A52C6A4902004BA157 /* IQTextInputViewNotification.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		047924D8F280D3F83522E839 /* Pods-IQTextInputViewNotification_ObjcExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IQTextInputViewNotification_ObjcExample.release.xcconfig"; path = "Target Support Files/Pods-IQTextInputViewNotification_ObjcExample/Pods-IQTextInputViewNotification_ObjcExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -52,6 +84,13 @@
 		A7C76169CF8F9F5B1E213FD8 /* Pods-IQTextInputViewNotification_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IQTextInputViewNotification_Example.release.xcconfig"; path = "Target Support Files/Pods-IQTextInputViewNotification_Example/Pods-IQTextInputViewNotification_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B0C45C847B01054FF9B7E825 /* Pods-IQTextInputViewNotification_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IQTextInputViewNotification_Example.debug.xcconfig"; path = "Target Support Files/Pods-IQTextInputViewNotification_Example/Pods-IQTextInputViewNotification_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BC83D007F7BD069AA0F0A736 /* Pods_IQTextInputViewNotification_ObjcExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IQTextInputViewNotification_ObjcExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C01ED19E2C6A4901004BA157 /* IQTextInputViewNotification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQTextInputViewNotification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C01ED1AC2C6A4979004BA157 /* IQTextInputViewNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextInputViewNotification.swift; sourceTree = "<group>"; };
+		C01ED1AD2C6A4979004BA157 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		C01ED1AE2C6A4979004BA157 /* IQTextInputViewInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextInputViewInfo.swift; sourceTree = "<group>"; };
+		C01ED1B02C6A4979004BA157 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		C01ED1B12C6A4979004BA157 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		C01ED1BC2C6A4995004BA157 /* IQKeyboardCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IQKeyboardCore.xcframework; path = ../Carthage/Build/IQKeyboardCore.xcframework; sourceTree = "<group>"; };
 		C03108302C4E2FBF008AA501 /* IQTextInputViewNotification.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = IQTextInputViewNotification.podspec.json; path = ../IQTextInputViewNotification.podspec.json; sourceTree = "<group>"; };
 		C074333E2C63AFF50076A8B7 /* IQTextInputViewNotification_ObjcExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IQTextInputViewNotification_ObjcExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07433402C63AFF50076A8B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01ED1A42C6A4902004BA157 /* IQTextInputViewNotification.framework in Frameworks */,
 				7EE309F4D4785D1F7A44A740 /* Pods_IQTextInputViewNotification_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +121,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C01ED19B2C6A4901004BA157 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C01ED1BD2C6A4995004BA157 /* IQKeyboardCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +148,7 @@
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for IQTextInputViewNotification */,
+				C01ED1AA2C6A4979004BA157 /* IQTextInputViewNotification */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				C074333F2C63AFF50076A8B7 /* IQTextInputViewNotification_ObjcExample */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -114,6 +163,7 @@
 				607FACD01AFB9204008FA782 /* IQTextInputViewNotification_Example.app */,
 				607FACE51AFB9204008FA782 /* IQTextInputViewNotification_Tests.xctest */,
 				C074333E2C63AFF50076A8B7 /* IQTextInputViewNotification_ObjcExample.app */,
+				C01ED19E2C6A4901004BA157 /* IQTextInputViewNotification.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,6 +228,35 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C01ED1AA2C6A4979004BA157 /* IQTextInputViewNotification */ = {
+			isa = PBXGroup;
+			children = (
+				C01ED1AB2C6A4979004BA157 /* Classes */,
+				C01ED1AF2C6A4979004BA157 /* Assets */,
+			);
+			name = IQTextInputViewNotification;
+			path = ../IQTextInputViewNotification;
+			sourceTree = "<group>";
+		};
+		C01ED1AB2C6A4979004BA157 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C01ED1AC2C6A4979004BA157 /* IQTextInputViewNotification.swift */,
+				C01ED1AD2C6A4979004BA157 /* .gitkeep */,
+				C01ED1AE2C6A4979004BA157 /* IQTextInputViewInfo.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C01ED1AF2C6A4979004BA157 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C01ED1B02C6A4979004BA157 /* .gitkeep */,
+				C01ED1B12C6A4979004BA157 /* PrivacyInfo.xcprivacy */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		C074333F2C63AFF50076A8B7 /* IQTextInputViewNotification_ObjcExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +278,7 @@
 		D370C811694CAE3B1BBE9479 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C01ED1BC2C6A4995004BA157 /* IQKeyboardCore.xcframework */,
 				2CAF4A4E8600083340FA03B5 /* Pods_IQTextInputViewNotification_Example.framework */,
 				BC83D007F7BD069AA0F0A736 /* Pods_IQTextInputViewNotification_ObjcExample.framework */,
 			);
@@ -206,6 +286,16 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C01ED1992C6A4901004BA157 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		607FACCF1AFB9204008FA782 /* IQTextInputViewNotification_Example */ = {
@@ -217,10 +307,12 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				90EF517866F285EDA3DF604D /* [CP] Embed Pods Frameworks */,
+				C01ED1A62C6A4902004BA157 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C01ED1A32C6A4902004BA157 /* PBXTargetDependency */,
 			);
 			name = IQTextInputViewNotification_Example;
 			productName = IQTextInputViewNotification;
@@ -244,6 +336,24 @@
 			productName = Tests;
 			productReference = 607FACE51AFB9204008FA782 /* IQTextInputViewNotification_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C01ED19D2C6A4901004BA157 /* IQTextInputViewNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01ED1A92C6A4902004BA157 /* Build configuration list for PBXNativeTarget "IQTextInputViewNotification" */;
+			buildPhases = (
+				C01ED1992C6A4901004BA157 /* Headers */,
+				C01ED19A2C6A4901004BA157 /* Sources */,
+				C01ED19B2C6A4901004BA157 /* Frameworks */,
+				C01ED19C2C6A4901004BA157 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IQTextInputViewNotification;
+			productName = "IQTextInputViewNotification-iOS";
+			productReference = C01ED19E2C6A4901004BA157 /* IQTextInputViewNotification.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		C074333D2C63AFF50076A8B7 /* IQTextInputViewNotification_ObjcExample */ = {
 			isa = PBXNativeTarget;
@@ -283,6 +393,9 @@
 						LastSwiftMigration = 1520;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
+					C01ED19D2C6A4901004BA157 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					C074333D2C63AFF50076A8B7 = {
 						CreatedOnToolsVersion = 15.2;
 						DevelopmentTeam = 7UUTF6T5P9;
@@ -307,6 +420,7 @@
 				607FACCF1AFB9204008FA782 /* IQTextInputViewNotification_Example */,
 				C074333D2C63AFF50076A8B7 /* IQTextInputViewNotification_ObjcExample */,
 				607FACE41AFB9204008FA782 /* IQTextInputViewNotification_Tests */,
+				C01ED19D2C6A4901004BA157 /* IQTextInputViewNotification */,
 			);
 		};
 /* End PBXProject section */
@@ -316,9 +430,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01ED1BA2C6A4979004BA157 /* PrivacyInfo.xcprivacy in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				C01ED1B82C6A4979004BA157 /* .gitkeep in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				C01ED1B42C6A4979004BA157 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +443,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C01ED19C2C6A4901004BA157 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C01ED1BB2C6A4979004BA157 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +558,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01ED1B22C6A4979004BA157 /* IQTextInputViewNotification.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				C01ED1B62C6A4979004BA157 /* IQTextInputViewInfo.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +570,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C01ED19A2C6A4901004BA157 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C01ED1B72C6A4979004BA157 /* IQTextInputViewInfo.swift in Sources */,
+				C01ED1B32C6A4979004BA157 /* IQTextInputViewNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +600,11 @@
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* IQTextInputViewNotification_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
+		};
+		C01ED1A32C6A4902004BA157 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C01ED19D2C6A4901004BA157 /* IQTextInputViewNotification */;
+			targetProxy = C01ED1A22C6A4902004BA157 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -598,7 +739,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -608,10 +750,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B0C45C847B01054FF9B7E825 /* Pods-IQTextInputViewNotification_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IQTextInputViewNotification/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -626,10 +772,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7C76169CF8F9F5B1E213FD8 /* Pods-IQTextInputViewNotification_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IQTextInputViewNotification/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -653,7 +803,11 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -671,12 +825,111 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IQTextInputViewNotification_Example.app/IQTextInputViewNotification_Example";
+			};
+			name = Release;
+		};
+		C01ED1A72C6A4902004BA157 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 CocoaPods. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infoenum.IQTextInputViewNotification-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C01ED1A82C6A4902004BA157 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 CocoaPods. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infoenum.IQTextInputViewNotification-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -708,7 +961,10 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -747,7 +1003,10 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
@@ -784,6 +1043,15 @@
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
 				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01ED1A92C6A4902004BA157 /* Build configuration list for PBXNativeTarget "IQTextInputViewNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01ED1A72C6A4902004BA157 /* Debug */,
+				C01ED1A82C6A4902004BA157 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
