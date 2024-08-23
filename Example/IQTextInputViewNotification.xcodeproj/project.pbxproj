@@ -61,9 +61,7 @@
 		BC83D007F7BD069AA0F0A736 /* Pods_IQTextInputViewNotification_ObjcExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IQTextInputViewNotification_ObjcExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01ED19E2C6A4901004BA157 /* IQTextInputViewNotification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQTextInputViewNotification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01ED1AC2C6A4979004BA157 /* IQTextInputViewNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextInputViewNotification.swift; sourceTree = "<group>"; };
-		C01ED1AD2C6A4979004BA157 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		C01ED1AE2C6A4979004BA157 /* IQTextInputViewInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextInputViewInfo.swift; sourceTree = "<group>"; };
-		C01ED1B02C6A4979004BA157 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		C01ED1B12C6A4979004BA157 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		C01ED1BC2C6A4995004BA157 /* IQKeyboardCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IQKeyboardCore.xcframework; path = ../Carthage/Build/IQKeyboardCore.xcframework; sourceTree = "<group>"; };
 		C03108302C4E2FBF008AA501 /* IQTextInputViewNotification.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = IQTextInputViewNotification.podspec.json; path = ../IQTextInputViewNotification.podspec.json; sourceTree = "<group>"; };
@@ -216,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				C01ED1AC2C6A4979004BA157 /* IQTextInputViewNotification.swift */,
-				C01ED1AD2C6A4979004BA157 /* .gitkeep */,
 				C01ED1AE2C6A4979004BA157 /* IQTextInputViewInfo.swift */,
 			);
 			path = Classes;
@@ -225,7 +222,6 @@
 		C01ED1AF2C6A4979004BA157 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				C01ED1B02C6A4979004BA157 /* .gitkeep */,
 				C01ED1B12C6A4979004BA157 /* PrivacyInfo.xcprivacy */,
 			);
 			path = Assets;
@@ -280,6 +276,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
+				C0620C422C746B95006AE1CE /* Swiftlint */,
 				90EF517866F285EDA3DF604D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -498,6 +495,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IQTextInputViewNotification_Example/Pods-IQTextInputViewNotification_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C0620C422C746B95006AE1CE /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		C239B4097812AE292871EAA3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

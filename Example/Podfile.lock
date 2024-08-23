@@ -1,14 +1,17 @@
 PODS:
   - IQKeyboardCore (1.0.5)
-  - IQTextInputViewNotification (1.0.4):
+  - IQTextInputViewNotification (1.0.5):
     - IQKeyboardCore (= 1.0.5)
+  - SwiftLint (0.56.1)
 
 DEPENDENCIES:
   - IQTextInputViewNotification (from `../`)
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
     - IQKeyboardCore
+    - SwiftLint
 
 EXTERNAL SOURCES:
   IQTextInputViewNotification:
@@ -16,8 +19,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   IQKeyboardCore: 28c8bf3bcd8ba5aa1570b318cbc4da94b861711e
-  IQTextInputViewNotification: ea75cd43c792d6a88016e3c21a7931ebb17e5c53
+  IQTextInputViewNotification: 4381fb828881983205fbee38f17da8a9fe2e835c
+  SwiftLint: c5fa0b7eece474d43d2178b581a1242a16267347
 
-PODFILE CHECKSUM: 284cb674d02e8776842091878f7b0cc64de654cb
+PODFILE CHECKSUM: 30b9da7ba019e3c454dc84a2dcb4f1c14d2130f8
 
 COCOAPODS: 1.15.2

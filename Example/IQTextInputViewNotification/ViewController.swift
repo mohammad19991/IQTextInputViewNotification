@@ -13,10 +13,6 @@ class ViewController: UIViewController {
 
     private let textInputViewObserver: IQTextInputViewNotification = .init()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     @IBAction private func subscribeAction(_ sender: UIBarButtonItem) {
 
         let identifier: String = "NotificationIdentifier"

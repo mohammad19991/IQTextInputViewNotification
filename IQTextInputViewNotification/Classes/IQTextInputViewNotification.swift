@@ -37,7 +37,7 @@ import IQKeyboardCore
 
     public private(set) var textInputViewInfo: IQTextInputViewInfo?
 
-    public var event: IQTextInputViewInfo.Event? { 
+    public var event: IQTextInputViewInfo.Event? {
         textInputViewInfo?.event
     }
 
@@ -148,6 +148,7 @@ import IQKeyboardCore
     }
 }
 
+// MARK: Deprecated
 @available(iOSApplicationExtension, unavailable)
 @MainActor
 public extension IQTextInputViewNotification {

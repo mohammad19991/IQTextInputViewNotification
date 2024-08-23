@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C01ED19D2C6A4901004BA157"
-               BuildableName = "IQTextInputViewNotification_iOS.framework"
+               BuildableName = "IQTextInputViewNotification.framework"
                BlueprintName = "IQTextInputViewNotification-iOS"
                ReferencedContainer = "container:IQTextInputViewNotification.xcodeproj">
             </BuildableReference>
@@ -50,7 +50,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C01ED19D2C6A4901004BA157"
-            BuildableName = "IQTextInputViewNotification_iOS.framework"
+            BuildableName = "IQTextInputViewNotification.framework"
             BlueprintName = "IQTextInputViewNotification-iOS"
             ReferencedContainer = "container:IQTextInputViewNotification.xcodeproj">
          </BuildableReference>

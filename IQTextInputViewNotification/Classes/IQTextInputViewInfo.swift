@@ -62,6 +62,7 @@ public struct IQTextInputViewInfo: Equatable {
     }
 }
 
+// MARK: Deprecated
 @available(iOSApplicationExtension, unavailable)
 public extension IQTextInputViewInfo {
 
