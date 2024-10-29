@@ -121,7 +121,8 @@ import IQKeyboardCore
 @MainActor
 @objc public extension IQTextInputViewNotification {
 
-    typealias TextInputViewCompletion = (_ event: IQTextInputViewInfo.Event, _ textInputView: any IQTextInputView) -> Void
+    typealias TextInputViewCompletion = (_ event: IQTextInputViewInfo.Event,
+                                         _ textInputView: any IQTextInputView) -> Void
 
     func subscribe(identifier: AnyHashable, changeHandler: @escaping TextInputViewCompletion) {
         textInputViewObservers[identifier] = changeHandler
@@ -179,4 +180,3 @@ public extension IQTextInputViewNotification {
         return IQTextInputViewInfoObjC(wrappedValue: textInputViewInfo)
     }
 }
-
