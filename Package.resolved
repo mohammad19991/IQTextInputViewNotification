@@ -3,10 +3,10 @@
     {
       "identity" : "iqkeyboardcore",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/hackiftekhar/IQKeyboardCore.git",
+      "location" : "https://github.com/mohammad19991/IQKeyboardCore.git",
       "state" : {
-        "revision" : "ae9d197f1d8c491b312e30eafb0193d164519c5a",
-        "version" : "1.0.7"
+        "revision" : "34a7f5124d51f5bff394b3c5c28b004ac66db829",
+        "version" : "1.0.9"
       }
     }
   ],
